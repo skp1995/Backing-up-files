@@ -19,6 +19,7 @@ def backup(folder):
         backupZip.write(f)
            # Add all the files in this folder to the ZIP file.
         for filename in filen:
+            if filename.endswith('.mp3'):
                 print(filename)
                 newBase = os.path.basename(folder) + '_'
                 # Remember:  Do not back up the zip files
